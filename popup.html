@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp CRM</title>
+    <style>
+        body {
+            width: 400px;
+            height: 300px;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>WhatsApp CRM</h2>
+        <p>Extensión cargada correctamente</p>
+        <button id="openWhatsApp">Abrir WhatsApp</button>
+    </div>
+
+    <script>
+        document.getElementById('openWhatsApp').addEventListener('click', function() {
+            chrome.tabs.create({url: 'https://web.whatsapp.com'});
+        });
+    </script>
+</body>
+</html>
